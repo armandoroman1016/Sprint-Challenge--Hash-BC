@@ -15,7 +15,7 @@ def get_indices_of_item_weights(weights, length, limit):
     for i in range(len(weights)):
         hash_table_insert(ht, weights[i], i)
 
-    for i in range(limit):
+    for i in range(length):
 
         value_needed = limit - weights[i]
 
@@ -23,7 +23,6 @@ def get_indices_of_item_weights(weights, length, limit):
 
         if difference_idx: 
   
-
             if i < difference_idx:
 
                 pair = [ difference_idx, i]
@@ -31,7 +30,6 @@ def get_indices_of_item_weights(weights, length, limit):
                 return pair
 
             else:
-
                 pair = [ i, difference_idx ]
 
                 return pair
